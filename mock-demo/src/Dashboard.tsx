@@ -221,72 +221,113 @@ const Dashboard: React.FC = () => {
       }
     };
 
-    return (
-      <Card 
-        sx={{ 
-          height: '100%',
-          cursor: 'pointer',
-          transition: 'all 0.3s ease',
-          '&:hover': {
-            transform: 'translateY(-4px)',
-            boxShadow: theme.shadows[8],
-          },
-        }}
-        onClick={() => setShowTrend(!showTrend)}
-      >
-        <CardContent>
-          <Box display="flex" justifyContent="space-between" alignItems="flex-start" mb={2}>
-            <Box>
-              <Typography color="textSecondary" gutterBottom variant="body2">
-                {metric.title}
-              </Typography>
-              <Typography variant="h4" component="div" sx={{ color: metric.color, fontWeight: 'bold' }}>
-                {metric.value}
-              </Typography>
-            </Box>
-            <Avatar sx={{ bgcolor: metric.color, width: 48, height: 48 }}>
-              {getIcon(metric.icon)}
-            </Avatar>
-          </Box>
+         return (
+       <Card 
+         sx={{ 
+           height: '100%',
+           cursor: 'pointer',
+           transition: 'all 0.3s ease',
+           background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+           border: '1px solid rgba(226, 232, 240, 0.8)',
+           '&:hover': {
+             transform: 'translateY(-4px)',
+             boxShadow: '0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 6px 8px -5px rgba(0, 0, 0, 0.04)',
+             background: 'linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%)',
+           },
+         }}
+         onClick={() => setShowTrend(!showTrend)}
+       >
+                  <CardContent sx={{ p: 1.5 }}>
+            <Box display="flex" justifyContent="space-between" alignItems="flex-start" mb={1}>
+             <Box sx={{ flex: 1 }}>
+               <Typography 
+                 variant="body2" 
+                 sx={{ 
+                   color: '#64748b',
+                   fontWeight: 500,
+                   textTransform: 'uppercase',
+                   letterSpacing: '0.05em',
+                   fontSize: '0.65rem',
+                   mb: 0.5,
+                 }}
+               >
+                 {metric.title}
+               </Typography>
+               <Typography 
+                 variant="h4" 
+                 component="div" 
+                 sx={{ 
+                   color: metric.color, 
+                   fontWeight: 700,
+                   letterSpacing: '-0.025em',
+                   background: `linear-gradient(135deg, ${metric.color} 0%, ${metric.color}dd 100%)`,
+                   backgroundClip: 'text',
+                   WebkitBackgroundClip: 'text',
+                   WebkitTextFillColor: 'transparent',
+                   fontSize: '1.5rem',
+                 }}
+               >
+                 {metric.value}
+               </Typography>
+             </Box>
+             <Avatar sx={{ 
+               bgcolor: metric.color, 
+               width: 40, 
+               height: 40,
+               boxShadow: `0 2px 8px ${metric.color}40`,
+             }}>
+               {getIcon(metric.icon)}
+             </Avatar>
+           </Box>
 
-          <Box display="flex" alignItems="center" gap={1} mb={2}>
-            {metric.changeType === 'increase' ? (
-              <TrendingUp color="success" fontSize="small" />
-            ) : metric.changeType === 'decrease' ? (
-              <TrendingDown color="error" fontSize="small" />
-            ) : (
-              <CheckCircle color="action" fontSize="small" />
-            )}
-            <Typography 
-              variant="body2" 
-              color={metric.changeType === 'increase' ? 'success.main' : 'error.main'}
-            >
-              {metric.change > 0 ? '+' : ''}{metric.change.toFixed(1)}%
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              vs last period
-            </Typography>
-          </Box>
+           <Box display="flex" alignItems="center" gap={1} mb={1}>
+             {metric.changeType === 'increase' ? (
+               <TrendingUp sx={{ color: '#10b981', fontSize: 16 }} />
+             ) : metric.changeType === 'decrease' ? (
+               <TrendingDown sx={{ color: '#ef4444', fontSize: 16 }} />
+             ) : (
+               <CheckCircle sx={{ color: '#6b7280', fontSize: 16 }} />
+             )}
+             <Typography 
+               variant="body2" 
+               sx={{ 
+                 color: metric.changeType === 'increase' ? '#10b981' : '#ef4444',
+                 fontWeight: 600,
+                 fontSize: '0.75rem',
+               }}
+             >
+               {metric.change > 0 ? '+' : ''}{metric.change.toFixed(1)}%
+             </Typography>
+             <Typography 
+               variant="body2" 
+               sx={{ 
+                 color: '#64748b',
+                 fontSize: '0.65rem',
+               }}
+             >
+               vs last period
+             </Typography>
+           </Box>
 
-          {showTrend && (
-            <Box mt={2}>
-              <ResponsiveContainer width="100%" height={100}>
-                <LineChart data={metric.trend}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="date" />
-                  <YAxis />
-                  <RechartsTooltip />
-                  <Line 
-                    type="monotone" 
-                    dataKey="value" 
-                    stroke={metric.color} 
-                    strokeWidth={2}
-                    dot={{ fill: metric.color }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </Box>
-          )}
+                     {showTrend && (
+             <Box mt={1}>
+               <ResponsiveContainer width="100%" height={80}>
+                 <LineChart data={metric.trend}>
+                   <CartesianGrid strokeDasharray="3 3" />
+                   <XAxis dataKey="date" />
+                   <YAxis />
+                   <RechartsTooltip />
+                   <Line 
+                     type="monotone" 
+                     dataKey="value" 
+                     stroke={metric.color} 
+                     strokeWidth={2}
+                     dot={{ fill: metric.color }}
+                   />
+                 </LineChart>
+               </ResponsiveContainer>
+             </Box>
+           )}
 
           {metric.description && (
             <Tooltip title={metric.description} arrow>
@@ -300,154 +341,152 @@ const Dashboard: React.FC = () => {
     );
   });
 
-  // I create a system health component
-  const SystemHealthCard: React.FC = React.memo(() => {
-    const getStatusColor = (status: string) => {
-      switch (status) {
-        case 'healthy': return theme.palette.success.main;
-        case 'warning': return theme.palette.warning.main;
-        case 'error': return theme.palette.error.main;
-        default: return theme.palette.grey[500];
-      }
-    };
+     // I create a system health component
+   const SystemHealthCard: React.FC = React.memo(() => {
+     const getStatusColor = (status: string) => {
+       switch (status) {
+         case 'healthy': return theme.palette.success.main;
+         case 'warning': return theme.palette.warning.main;
+         case 'error': return theme.palette.error.main;
+         default: return theme.palette.grey[500];
+       }
+     };
 
-    const getStatusIcon = (status: string) => {
-      switch (status) {
-        case 'healthy': return <CheckCircle color="success" />;
-        case 'warning': return <Warning color="warning" />;
-        case 'error': return <Error color="error" />;
-        default: return <Info color="action" />;
-      }
-    };
+     const getStatusIcon = (status: string) => {
+       switch (status) {
+         case 'healthy': return <CheckCircle color="success" />;
+         case 'warning': return <Warning color="warning" />;
+         case 'error': return <Error color="error" />;
+         default: return <Info color="action" />;
+       }
+     };
 
-    return (
-      <Card>
-        <CardContent>
-          <Typography variant="h6" gutterBottom>
-            System Health
-          </Typography>
-          <List>
-            {systemHealth.slice(0, 8).map((item, index) => (
-              <React.Fragment key={item.component}>
-                <ListItem>
-                  <ListItemIcon>
-                    {getStatusIcon(item.status)}
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={item.component}
-                    secondary={
-                      <Box>
-                        <Typography variant="body2" color="textSecondary">
-                          Uptime: {item.uptime}% | Response: {item.responseTime}ms
-                        </Typography>
-                        <LinearProgress 
-                          variant="determinate" 
-                          value={item.uptime} 
-                          sx={{ 
-                            mt: 1,
-                            '& .MuiLinearProgress-bar': {
-                              backgroundColor: getStatusColor(item.status),
-                            },
-                          }}
-                        />
-                      </Box>
-                    }
-                  />
-                  <Typography variant="caption" color="textSecondary">
-                    {new Date(item.lastCheck).toLocaleTimeString()}
-                  </Typography>
-                </ListItem>
-                {index < systemHealth.length - 1 && <Divider />}
-              </React.Fragment>
-            ))}
-          </List>
-        </CardContent>
-      </Card>
-    );
-  });
+     return (
+       <Card>
+         <CardContent sx={{ p: 2 }}>
+           <Typography variant="h6" gutterBottom sx={{ mb: 1 }}>
+             System Health
+           </Typography>
+           <List dense sx={{ py: 0 }}>
+             {systemHealth.slice(0, 6).map((item, index) => (
+               <React.Fragment key={item.component}>
+                 <ListItem sx={{ py: 0.5 }}>
+                   <ListItemIcon sx={{ minWidth: 32 }}>
+                     {getStatusIcon(item.status)}
+                   </ListItemIcon>
+                   <ListItemText
+                     primary={
+                       <Typography variant="body2" fontWeight={500}>
+                         {item.component}
+                       </Typography>
+                     }
+                     secondary={
+                       <Box>
+                         <Typography variant="caption" color="textSecondary">
+                           {item.uptime}% uptime • {item.responseTime}ms
+                         </Typography>
+                         <LinearProgress 
+                           variant="determinate" 
+                           value={item.uptime} 
+                           sx={{ 
+                             mt: 0.5,
+                             height: 4,
+                             '& .MuiLinearProgress-bar': {
+                               backgroundColor: getStatusColor(item.status),
+                             },
+                           }}
+                         />
+                       </Box>
+                     }
+                   />
+                 </ListItem>
+                 {index < systemHealth.length - 1 && <Divider sx={{ my: 0.5 }} />}
+               </React.Fragment>
+             ))}
+           </List>
+         </CardContent>
+       </Card>
+     );
+   });
 
-  // I create a recent violations component
-  const RecentViolationsCard: React.FC = React.memo(() => {
-    const getSeverityColor = (severity: string) => {
-      switch (severity) {
-        case 'critical': return theme.palette.error.main;
-        case 'high': return theme.palette.warning.main;
-        case 'medium': return theme.palette.info.main;
-        case 'low': return theme.palette.success.main;
-        default: return theme.palette.grey[500];
-      }
-    };
+     // I create a recent violations component
+   const RecentViolationsCard: React.FC = React.memo(() => {
+     const getSeverityColor = (severity: string) => {
+       switch (severity) {
+         case 'critical': return theme.palette.error.main;
+         case 'high': return theme.palette.warning.main;
+         case 'medium': return theme.palette.info.main;
+         case 'low': return theme.palette.success.main;
+         default: return theme.palette.grey[500];
+       }
+     };
 
-    const getTypeIcon = (type: string) => {
-      switch (type) {
-        case 'pii': return <Security />;
-        case 'toxicity': return <Warning />;
-        case 'jailbreak': return <Error />;
-        case 'bias': return <Info />;
-        default: return <Info />;
-      }
-    };
+     const getTypeIcon = (type: string) => {
+       switch (type) {
+         case 'pii': return <Security />;
+         case 'toxicity': return <Warning />;
+         case 'jailbreak': return <Error />;
+         case 'bias': return <Info />;
+         default: return <Info />;
+       }
+     };
 
-    return (
-      <Card>
-        <CardContent>
-          <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-            <Typography variant="h6">
-              Recent Violations
-            </Typography>
-            <Badge badgeContent={violations.filter(v => !v.resolved).length} color="error">
-              <Warning />
-            </Badge>
-          </Box>
-          <List>
-            {violations.slice(0, 5).map((violation, index) => (
-              <React.Fragment key={violation.id}>
-                <ListItem>
-                  <ListItemIcon>
-                    <Avatar sx={{ bgcolor: getSeverityColor(violation.severity), width: 32, height: 32 }}>
-                      {getTypeIcon(violation.type)}
-                    </Avatar>
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={
-                      <Box display="flex" alignItems="center" gap={1}>
-                        <Typography variant="body2" fontWeight="bold">
-                          {violation.type.toUpperCase()}
-                        </Typography>
-                        <Chip 
-                          label={violation.severity} 
-                          size="small" 
-                          sx={{ 
-                            bgcolor: getSeverityColor(violation.severity),
-                            color: 'white',
-                            fontSize: '0.7rem',
-                          }}
-                        />
-                        {violation.resolved && (
-                          <Chip label="Resolved" size="small" color="success" />
-                        )}
-                      </Box>
-                    }
-                    secondary={
-                      <Box>
-                        <Typography variant="body2" color="textSecondary">
-                          {violation.description}
-                        </Typography>
-                        <Typography variant="caption" color="textSecondary">
-                          {violation.user_email} • {violation.model} • {new Date(violation.timestamp).toLocaleString()}
-                        </Typography>
-                      </Box>
-                    }
-                  />
-                </ListItem>
-                {index < violations.length - 1 && <Divider />}
-              </React.Fragment>
-            ))}
-          </List>
-        </CardContent>
-      </Card>
-    );
-  });
+     return (
+       <Card>
+         <CardContent sx={{ p: 2 }}>
+           <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
+             <Typography variant="h6">
+               Recent Violations
+             </Typography>
+             <Badge badgeContent={violations.filter(v => !v.resolved).length} color="error">
+               <Warning />
+             </Badge>
+           </Box>
+           <List dense sx={{ py: 0 }}>
+             {violations.slice(0, 4).map((violation, index) => (
+               <React.Fragment key={violation.id}>
+                 <ListItem sx={{ py: 0.5 }}>
+                   <ListItemIcon sx={{ minWidth: 32 }}>
+                     <Avatar sx={{ bgcolor: getSeverityColor(violation.severity), width: 24, height: 24 }}>
+                       {getTypeIcon(violation.type)}
+                     </Avatar>
+                   </ListItemIcon>
+                   <ListItemText
+                     primary={
+                       <Box display="flex" alignItems="center" gap={0.5}>
+                         <Typography variant="body2" fontWeight={500} sx={{ fontSize: '0.75rem' }}>
+                           {violation.type.toUpperCase()}
+                         </Typography>
+                         <Chip 
+                           label={violation.severity} 
+                           size="small" 
+                           sx={{ 
+                             bgcolor: getSeverityColor(violation.severity),
+                             color: 'white',
+                             fontSize: '0.6rem',
+                             height: 16,
+                           }}
+                         />
+                         {violation.resolved && (
+                           <Chip label="✓" size="small" color="success" sx={{ fontSize: '0.6rem', height: 16 }} />
+                         )}
+                       </Box>
+                     }
+                     secondary={
+                       <Typography variant="caption" color="textSecondary" sx={{ fontSize: '0.7rem' }}>
+                         {violation.user_email} • {new Date(violation.timestamp).toLocaleTimeString()}
+                       </Typography>
+                     }
+                   />
+                 </ListItem>
+                 {index < violations.length - 1 && <Divider sx={{ my: 0.5 }} />}
+               </React.Fragment>
+             ))}
+           </List>
+         </CardContent>
+       </Card>
+     );
+   });
 
   // I create a cost breakdown chart component
   const CostBreakdownChart: React.FC = React.memo(() => {
@@ -523,21 +562,61 @@ const Dashboard: React.FC = () => {
   }
 
   return (
-    <Box>
-      {/* I create a comprehensive header with controls */}
-      <AppBar position="static" color="default" elevation={1}>
-        <Toolbar>
-          <DashboardIcon sx={{ mr: 2 }} />
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            AI Governance Dashboard - Mock Demo
-          </Typography>
-          <Box display="flex" gap={2} alignItems="center">
-            <FormControl size="small">
-              <InputLabel>Time Range</InputLabel>
+    <Box sx={{ 
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
+    }}>
+      {/* I create a sophisticated header with gradient background */}
+      <AppBar position="static" elevation={0} sx={{
+        background: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+      }}>
+        <Toolbar sx={{ minHeight: 70 }}>
+          <Box display="flex" alignItems="center" sx={{ flexGrow: 1 }}>
+            <Avatar sx={{ 
+              bgcolor: 'rgba(255, 255, 255, 0.2)', 
+              mr: 2,
+              width: 40,
+              height: 40,
+            }}>
+              <DashboardIcon />
+            </Avatar>
+            <Box>
+              <Typography variant="h5" component="div" sx={{ 
+                fontWeight: 700,
+                color: 'white',
+                letterSpacing: '-0.025em',
+              }}>
+                AI Governance Dashboard
+              </Typography>
+              <Typography variant="body2" sx={{ 
+                color: 'rgba(255, 255, 255, 0.8)',
+                fontSize: '0.75rem',
+              }}>
+                Mock Demo Version
+              </Typography>
+            </Box>
+          </Box>
+          
+          <Box display="flex" gap={1} alignItems="center">
+            <FormControl size="small" sx={{ minWidth: 120 }}>
+              <InputLabel sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>Time Range</InputLabel>
               <Select
                 value={selectedTimeRange}
                 label="Time Range"
                 onChange={(e) => setSelectedTimeRange(e.target.value)}
+                sx={{
+                  color: 'white',
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    borderColor: 'rgba(255, 255, 255, 0.3)',
+                  },
+                  '&:hover .MuiOutlinedInput-notchedOutline': {
+                    borderColor: 'rgba(255, 255, 255, 0.5)',
+                  },
+                  '& .MuiSvgIcon-root': {
+                    color: 'rgba(255, 255, 255, 0.8)',
+                  },
+                }}
               >
                 <MenuItem value="1h">Last Hour</MenuItem>
                 <MenuItem value="24h">Last 24 Hours</MenuItem>
@@ -551,25 +630,37 @@ const Dashboard: React.FC = () => {
                 <Switch
                   checked={autoRefresh}
                   onChange={(e) => setAutoRefresh(e.target.checked)}
+                  sx={{
+                    '& .MuiSwitch-switchBase.Mui-checked': {
+                      color: '#10b981',
+                    },
+                    '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+                      backgroundColor: '#10b981',
+                    },
+                  }}
                 />
               }
-              label="Auto Refresh"
+              label={
+                <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                  Auto Refresh
+                </Typography>
+              }
             />
             
             <Tooltip title="Refresh Data">
-              <IconButton onClick={refetch}>
+              <IconButton onClick={refetch} sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 <Refresh />
               </IconButton>
             </Tooltip>
             
             <Tooltip title="Settings">
-              <IconButton onClick={() => setShowDetails(true)}>
+              <IconButton onClick={() => setShowDetails(true)} sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 <Settings />
               </IconButton>
             </Tooltip>
 
             <Tooltip title="Mock Demo Info">
-              <IconButton onClick={() => setShowMockInfo(true)}>
+              <IconButton onClick={() => setShowMockInfo(true)} sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                 <BugReport />
               </IconButton>
             </Tooltip>
@@ -577,60 +668,95 @@ const Dashboard: React.FC = () => {
         </Toolbar>
       </AppBar>
 
-      <Box p={3}>
-        {/* I create the main dashboard grid */}
-        <Grid container spacing={3}>
-          {/* I display metric cards */}
-          {processedMetrics.map((metric) => (
-            <Grid item xs={12} md={6} lg={3} key={metric.id}>
-              <MetricCard metric={metric} />
+             {/* I create the main dashboard content with optimized spacing */}
+       <Box sx={{ p: 2 }}>
+                   {/* Metrics Section - Ultra compact layout */}
+          <Box sx={{ 
+            mb: 2,
+            p: 1.5,
+            borderRadius: 3,
+            background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+            border: '1px solid rgba(226, 232, 240, 0.8)',
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+          }}>
+                         <Typography variant="h5" sx={{ 
+               fontWeight: 700,
+               color: '#1e293b',
+               mb: 1.5,
+               textAlign: 'center',
+             }}>
+               Key Metrics
+             </Typography>
+            <Grid container spacing={1}>
+              {processedMetrics.map((metric) => (
+                <Grid item xs={6} sm={3} key={metric.id}>
+                  <MetricCard metric={metric} />
+                </Grid>
+              ))}
             </Grid>
-          ))}
+          </Box>
 
-          {/* I add system health and violations */}
-          <Grid item xs={12} md={6}>
-            <SystemHealthCard />
-          </Grid>
-          
-          <Grid item xs={12} md={6}>
-            <RecentViolationsCard />
-          </Grid>
-
-          {/* I add cost breakdown chart */}
-          <Grid item xs={12} md={8}>
-            <CostBreakdownChart />
-          </Grid>
-
-          {/* I add a real-time activity feed */}
-          <Grid item xs={12} md={4}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Real-time Activity
-                </Typography>
-                <Box height={300} overflow="auto">
-                  <List>
-                    {[
-                      { time: '2 min ago', action: 'New request processed', user: 'john.doe' },
-                      { time: '3 min ago', action: 'Policy violation detected', user: 'jane.smith' },
-                      { time: '5 min ago', action: 'Cost threshold reached', user: 'system' },
-                      { time: '7 min ago', action: 'New user registered', user: 'admin' },
-                      { time: '10 min ago', action: 'Safety check completed', user: 'system' },
-                    ].map((activity, index) => (
-                      <ListItem key={index} dense>
-                        <ListItemText
-                          primary={activity.action}
-                          secondary={`${activity.user} • ${activity.time}`}
-                        />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-      </Box>
+                   {/* System Monitoring, Analytics & Insights Section - 3-column layout */}
+          <Box sx={{ 
+            mb: 2,
+            p: 2,
+            borderRadius: 3,
+            background: 'linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%)',
+            border: '1px solid rgba(203, 213, 225, 0.8)',
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+          }}>
+            <Typography variant="h4" gutterBottom sx={{ 
+              fontWeight: 700,
+              color: '#1e293b',
+              mb: 2,
+            }}>
+              System Monitoring, Analytics & Insights
+            </Typography>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={4}>
+                <SystemHealthCard />
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <RecentViolationsCard />
+              </Grid>
+                             <Grid item xs={12} md={4}>
+                 <Card>
+                   <CardContent sx={{ p: 2 }}>
+                     <Typography variant="h6" gutterBottom sx={{ mb: 1 }}>
+                       Real-time Activity
+                     </Typography>
+                     <Box height={200} overflow="auto">
+                       <List dense sx={{ py: 0 }}>
+                         {[
+                           { time: '2 min ago', action: 'New request processed', user: 'john.doe' },
+                           { time: '3 min ago', action: 'Policy violation detected', user: 'jane.smith' },
+                           { time: '5 min ago', action: 'Cost threshold reached', user: 'system' },
+                           { time: '7 min ago', action: 'New user registered', user: 'admin' },
+                           { time: '10 min ago', action: 'Safety check completed', user: 'system' },
+                         ].map((activity, index) => (
+                           <ListItem key={index} dense sx={{ py: 0.5 }}>
+                             <ListItemText
+                               primary={
+                                 <Typography variant="body2" sx={{ fontSize: '0.75rem' }}>
+                                   {activity.action}
+                                 </Typography>
+                               }
+                               secondary={
+                                 <Typography variant="caption" color="textSecondary" sx={{ fontSize: '0.7rem' }}>
+                                   {activity.user} • {activity.time}
+                                 </Typography>
+                               }
+                             />
+                           </ListItem>
+                         ))}
+                       </List>
+                     </Box>
+                   </CardContent>
+                 </Card>
+               </Grid>
+            </Grid>
+          </Box>
+       </Box>
 
       {/* I add a floating action button for quick actions */}
       <Fab
