@@ -2,6 +2,16 @@
 
 > **I designed this as a comprehensive enterprise AI governance platform that provides production-grade LLM proxy, safety guardrails, cost management, and compliance monitoring for organizations using AI/LLM technologies.**
 
+## 📸 Screenshots
+
+<div align="center">
+  <img src="assets/screen1.png" alt="AI Governance Dashboard - Main View" width="800" />
+  <p><em>Main Dashboard with Key Metrics and System Monitoring</em></p>
+  
+  <img src="assets/screen2.png" alt="AI Governance Dashboard - Detailed View" width="800" />
+  <p><em>Detailed Analytics and Real-time Activity Monitoring</em></p>
+</div>
+
 ## 🎯 Overview
 
 I built this platform to address the critical need for enterprise-grade governance of AI/LLM usage. It provides a unified gateway for all LLM interactions with comprehensive safety checks, cost controls, policy enforcement, and real-time monitoring.
@@ -106,15 +116,14 @@ I built this platform to address the critical need for enterprise-grade governan
 
 ### 1. Clone and Setup
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/aurelius-in/AI-Governance.git>
 cd AI-Governance
 cp env.example .env
-# Edit .env with your configuration
 ```
 
 ### 2. Start the Platform
 ```bash
-# I created a comprehensive Makefile for easy management
+
 make up
 
 # Or start individual services
