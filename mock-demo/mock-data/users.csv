@@ -1,0 +1,51 @@
+id,email,username,role,organization,created_at,last_login,is_active,department
+1,john.doe@acme.com,john.doe,developer,Acme Corp,2024-01-01T00:00:00Z,2024-01-15T10:30:00Z,true,Engineering
+2,jane.smith@acme.com,jane.smith,admin,Acme Corp,2024-01-01T00:00:00Z,2024-01-15T10:32:00Z,true,Management
+3,mike.johnson@techcorp.com,mike.johnson,developer,TechCorp,2024-01-02T00:00:00Z,2024-01-15T10:35:00Z,true,Product
+4,sarah.wilson@innovate.com,sarah.wilson,project_owner,Innovate Inc,2024-01-02T00:00:00Z,2024-01-15T10:40:00Z,true,Marketing
+5,david.brown@startup.com,david.brown,developer,StartupXYZ,2024-01-03T00:00:00Z,2024-01-15T10:45:00Z,true,Engineering
+6,emma.davis@enterprise.com,emma.davis,admin,Enterprise Solutions,2024-01-03T00:00:00Z,2024-01-15T10:52:00Z,true,Operations
+7,alex.chen@fintech.com,alex.chen,developer,FinTech Pro,2024-01-04T00:00:00Z,2024-01-15T11:00:00Z,true,Data Science
+8,lisa.garcia@healthcare.com,lisa.garcia,project_owner,Healthcare Plus,2024-01-04T00:00:00Z,2024-01-15T11:10:00Z,true,Research
+9,robert.taylor@consulting.com,robert.taylor,admin,Consulting Group,2024-01-05T00:00:00Z,2024-01-15T11:20:00Z,true,Strategy
+10,maria.rodriguez@education.com,maria.rodriguez,developer,Education First,2024-01-05T00:00:00Z,2024-01-15T11:32:00Z,true,Technology
+11,james.lee@retail.com,james.lee,project_owner,Retail Solutions,2024-01-06T00:00:00Z,2024-01-15T11:45:00Z,true,Sales
+12,anna.kowalski@manufacturing.com,anna.kowalski,developer,Manufacturing Co,2024-01-06T00:00:00Z,2024-01-15T12:00:00Z,true,Quality Control
+13,thomas.anderson@logistics.com,thomas.anderson,admin,Logistics Pro,2024-01-07T00:00:00Z,2024-01-15T12:15:00Z,true,Operations
+14,rachel.green@marketing.com,rachel.green,developer,Marketing Agency,2024-01-07T00:00:00Z,2024-01-15T12:32:00Z,true,Digital
+15,kevin.martinez@energy.com,kevin.martinez,project_owner,Energy Corp,2024-01-08T00:00:00Z,2024-01-15T12:50:00Z,true,Engineering
+16,patricia.white@legal.com,patricia.white,admin,Legal Services,2024-01-08T00:00:00Z,2024-01-15T13:10:00Z,true,Compliance
+17,daniel.clark@realestate.com,daniel.clark,developer,Real Estate Pro,2024-01-09T00:00:00Z,2024-01-15T13:30:00Z,true,Technology
+18,michelle.lee@pharma.com,michelle.lee,project_owner,Pharma Research,2024-01-09T00:00:00Z,2024-01-15T13:52:00Z,true,R&D
+19,christopher.hall@aerospace.com,christopher.hall,developer,Aerospace Inc,2024-01-10T00:00:00Z,2024-01-15T14:15:00Z,true,Engineering
+20,amanda.foster@banking.com,amanda.foster,admin,Banking Solutions,2024-01-10T00:00:00Z,2024-01-15T14:20:00Z,true,Risk Management
+21,steven.wang@insurance.com,steven.wang,developer,Insurance Pro,2024-01-11T00:00:00Z,2024-01-15T14:25:00Z,true,Data Analytics
+22,jennifer.lopez@media.com,jennifer.lopez,project_owner,Media Corp,2024-01-11T00:00:00Z,2024-01-15T14:30:00Z,true,Content
+23,mark.thompson@telecom.com,mark.thompson,admin,Telecom Solutions,2024-01-12T00:00:00Z,2024-01-15T14:35:00Z,true,Network
+24,rebecca.adams@food.com,rebecca.adams,developer,Food Services,2024-01-12T00:00:00Z,2024-01-15T14:40:00Z,true,Operations
+25,gregory.miller@automotive.com,gregory.miller,project_owner,Automotive Tech,2024-01-13T00:00:00Z,2024-01-15T14:45:00Z,true,Engineering
+26,stephanie.cook@fashion.com,stephanie.cook,developer,Fashion Forward,2024-01-13T00:00:00Z,2024-01-15T14:50:00Z,true,Design
+27,matthew.lewis@construction.com,matthew.lewis,admin,Construction Pro,2024-01-14T00:00:00Z,2024-01-15T14:55:00Z,true,Project Management
+28,elizabeth.young@hospitality.com,elizabeth.young,developer,Hospitality Group,2024-01-14T00:00:00Z,2024-01-15T15:00:00Z,true,Technology
+29,anthony.king@entertainment.com,anthony.king,project_owner,Entertainment Corp,2024-01-15T00:00:00Z,2024-01-15T15:05:00Z,true,Digital Media
+30,nicole.scott@transportation.com,nicole.scott,admin,Transportation Solutions,2024-01-15T00:00:00Z,2024-01-15T15:10:00Z,true,Operations
+31,eric.morris@utilities.com,eric.morris,developer,Utilities Pro,2024-01-15T00:00:00Z,2024-01-15T15:15:00Z,true,Engineering
+32,ashley.rogers@mining.com,ashley.rogers,project_owner,Mining Corp,2024-01-15T00:00:00Z,2024-01-15T15:20:00Z,true,Safety
+33,justin.reed@agriculture.com,justin.reed,developer,Agriculture Tech,2024-01-15T00:00:00Z,2024-01-15T15:25:00Z,true,Research
+34,melissa.cooper@chemical.com,melissa.cooper,admin,Chemical Solutions,2024-01-15T00:00:00Z,2024-01-15T15:30:00Z,true,Compliance
+35,ryan.richardson@defense.com,ryan.richardson,developer,Defense Systems,2024-01-15T00:00:00Z,2024-01-15T15:35:00Z,true,Security
+36,lauren.cox@aerospace.com,lauren.cox,project_owner,Aerospace Inc,2024-01-15T00:00:00Z,2024-01-15T15:40:00Z,true,Research
+37,tyler.ward@biotech.com,tyler.ward,admin,Biotech Innovations,2024-01-15T00:00:00Z,2024-01-15T15:45:00Z,true,Regulatory
+38,danielle.torres@nanotech.com,danielle.torres,developer,NanoTech Solutions,2024-01-15T00:00:00Z,2024-01-15T15:50:00Z,true,Engineering
+39,corey.peterson@quantum.com,corey.peterson,project_owner,Quantum Computing,2024-01-15T00:00:00Z,2024-01-15T15:55:00Z,true,Research
+40,heather.bailey@robotics.com,heather.bailey,admin,Robotics Corp,2024-01-15T00:00:00Z,2024-01-15T16:00:00Z,true,Operations
+41,sean.wood@ai.com,sean.wood,developer,AI Solutions,2024-01-15T00:00:00Z,2024-01-15T16:05:00Z,true,Machine Learning
+42,vanessa.barnes@blockchain.com,vanessa.barnes,project_owner,Blockchain Tech,2024-01-15T00:00:00Z,2024-01-15T16:10:00Z,true,Development
+43,brett.ross@cybersecurity.com,brett.ross,admin,Cyber Security Pro,2024-01-15T00:00:00Z,2024-01-15T16:15:00Z,true,Security
+44,angela.henderson@cloud.com,angela.henderson,developer,Cloud Solutions,2024-01-15T00:00:00Z,2024-01-15T16:20:00Z,true,Infrastructure
+45,travis.coleman@iot.com,travis.coleman,project_owner,IoT Innovations,2024-01-15T00:00:00Z,2024-01-15T16:25:00Z,true,Engineering
+46,monica.jenkins@vr.com,monica.jenkins,admin,VR Technologies,2024-01-15T00:00:00Z,2024-01-15T16:30:00Z,true,Product
+47,derrick.perry@ar.com,derrick.perry,developer,AR Solutions,2024-01-15T00:00:00Z,2024-01-15T16:35:00Z,true,Development
+48,stacy.powell@ml.com,stacy.powell,project_owner,ML Innovations,2024-01-15T00:00:00Z,2024-01-15T16:40:00Z,true,Research
+49,leonard.long@nlp.com,leonard.long,admin,NLP Technologies,2024-01-15T00:00:00Z,2024-01-15T16:45:00Z,true,Operations
+50,deborah.hughes@cv.com,deborah.hughes,developer,Computer Vision Pro,2024-01-15T00:00:00Z,2024-01-15T16:50:00Z,true,Engineering

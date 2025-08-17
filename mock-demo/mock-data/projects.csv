@@ -1,0 +1,21 @@
+id,name,description,organization,owner_email,created_at,status,daily_budget,monthly_budget,total_spent,project_type
+1,AI Research Project,Advanced AI research and development for enterprise applications,Acme Corp,john.doe@acme.com,2024-01-01T00:00:00Z,active,100.00,2500.00,456.78,research
+2,Customer Support Bot,AI-powered customer support chatbot for 24/7 assistance,TechCorp,mike.johnson@techcorp.com,2024-01-02T00:00:00Z,active,50.00,1200.00,234.56,product
+3,Content Generation,Automated content generation for marketing campaigns,Innovate Inc,sarah.wilson@innovate.com,2024-01-02T00:00:00Z,active,75.00,1800.00,345.67,marketing
+4,Code Review Assistant,AI-powered code review and quality assurance tool,StartupXYZ,david.brown@startup.com,2024-01-03T00:00:00Z,active,25.00,600.00,123.45,development
+5,Data Analysis,Enterprise data analysis and business intelligence platform,Enterprise Solutions,emma.davis@enterprise.com,2024-01-03T00:00:00Z,active,150.00,3500.00,678.90,analytics
+6,Risk Assessment,Financial risk assessment and compliance monitoring system,FinTech Pro,alex.chen@fintech.com,2024-01-04T00:00:00Z,active,200.00,5000.00,890.12,finance
+7,Medical Analysis,AI-powered medical image analysis and diagnosis support,Healthcare Plus,lisa.garcia@healthcare.com,2024-01-04T00:00:00Z,active,300.00,7500.00,1234.56,healthcare
+8,Strategy Planning,Strategic planning and business consulting AI platform,Consulting Group,robert.taylor@consulting.com,2024-01-05T00:00:00Z,active,125.00,3000.00,567.89,consulting
+9,Student Assessment,Automated student assessment and grading system,Education First,maria.rodriguez@education.com,2024-01-05T00:00:00Z,active,40.00,1000.00,234.56,education
+10,Inventory Management,AI-powered inventory optimization and management system,Retail Solutions,james.lee@retail.com,2024-01-06T00:00:00Z,active,80.00,2000.00,345.67,retail
+11,Quality Control,Automated quality control and defect detection system,Manufacturing Co,anna.kowalski@manufacturing.com,2024-01-06T00:00:00Z,active,120.00,3000.00,456.78,manufacturing
+12,Route Optimization,Logistics route optimization and delivery planning,Logistics Pro,thomas.anderson@logistics.com,2024-01-07T00:00:00Z,active,90.00,2200.00,378.90,logistics
+13,Campaign Analysis,Marketing campaign performance analysis and optimization,Marketing Agency,rachel.green@marketing.com,2024-01-07T00:00:00Z,active,60.00,1500.00,267.89,marketing
+14,Energy Optimization,Energy consumption optimization and sustainability analysis,Energy Corp,kevin.martinez@energy.com,2024-01-08T00:00:00Z,active,250.00,6000.00,1123.45,energy
+15,Legal Research,AI-powered legal research and case analysis platform,Legal Services,patricia.white@legal.com,2024-01-08T00:00:00Z,active,180.00,4500.00,789.01,legal
+16,Property Analysis,Real estate market analysis and property valuation system,Real Estate Pro,daniel.clark@realestate.com,2024-01-09T00:00:00Z,active,70.00,1800.00,312.34,real_estate
+17,Drug Discovery,AI-powered drug discovery and pharmaceutical research,Pharma Research,michelle.lee@pharma.com,2024-01-09T00:00:00Z,active,500.00,12000.00,2345.67,pharmaceutical
+18,Flight Simulation,Aerospace flight simulation and training platform,Aerospace Inc,christopher.hall@aerospace.com,2024-01-10T00:00:00Z,active,400.00,10000.00,1890.12,aerospace
+19,Banking Solutions,AI-powered banking and financial services platform,Banking Solutions,amanda.foster@banking.com,2024-01-10T00:00:00Z,active,350.00,8500.00,1567.89,banking
+20,Insurance Analytics,Insurance risk assessment and claims analysis system,Insurance Pro,steven.wang@insurance.com,2024-01-11T00:00:00Z,active,150.00,3750.00,678.90,insurance

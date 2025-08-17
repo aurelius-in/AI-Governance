@@ -1,0 +1,51 @@
+id,type,severity,user_email,model,description,timestamp,resolved,risk_score
+1,pii,high,john.doe@acme.com,gpt-4,Email address detected in input: john.doe@acme.com,2024-01-15T10:30:00Z,false,0.85
+2,toxicity,medium,jane.smith@acme.com,claude-3-sonnet,Hate speech detected in output response,2024-01-15T10:32:00Z,true,0.65
+3,jailbreak,critical,mike.johnson@techcorp.com,gpt-3.5-turbo,Jailbreak attempt detected in prompt engineering,2024-01-15T10:35:00Z,false,0.95
+4,pii,medium,sarah.wilson@innovate.com,gemini-pro,Phone number detected: +1-555-123-4567,2024-01-15T10:40:00Z,true,0.72
+5,bias,low,david.brown@startup.com,gpt-4,Gender bias detected in generated content,2024-01-15T10:45:00Z,false,0.45
+6,toxicity,high,emma.davis@enterprise.com,claude-3-opus,Explicit content detected in user input,2024-01-15T10:52:00Z,false,0.88
+7,pii,high,alex.chen@fintech.com,gpt-4,Credit card number detected: 4532-1234-5678-9012,2024-01-15T11:00:00Z,true,0.92
+8,jailbreak,medium,robert.taylor@consulting.com,claude-3-sonnet,Role-playing jailbreak attempt detected,2024-01-15T11:20:00Z,false,0.78
+9,toxicity,low,lisa.garcia@healthcare.com,gpt-3.5-turbo,Mild profanity detected in output,2024-01-15T11:35:00Z,true,0.35
+10,pii,medium,maria.rodriguez@education.com,gemini-pro,SSN detected in text: 123-45-6789,2024-01-15T11:32:00Z,false,0.68
+11,bias,medium,anna.kowalski@manufacturing.com,gpt-4,Racial bias detected in analysis output,2024-01-15T12:00:00Z,true,0.62
+12,jailbreak,high,thomas.anderson@logistics.com,claude-3-opus,Advanced jailbreak technique detected,2024-01-15T12:15:00Z,false,0.82
+13,toxicity,medium,rachel.green@marketing.com,claude-3-sonnet,Discriminatory language detected,2024-01-15T12:32:00Z,false,0.71
+14,pii,low,kevin.martinez@energy.com,gpt-3.5-turbo,IP address detected in log data,2024-01-15T12:50:00Z,true,0.42
+15,jailbreak,medium,patricia.white@legal.com,gpt-4,Character impersonation jailbreak attempt,2024-01-15T13:10:00Z,false,0.75
+16,toxicity,high,daniel.clark@realestate.com,claude-3-sonnet,Threatening language detected in input,2024-01-15T13:30:00Z,true,0.89
+17,pii,medium,michelle.lee@pharma.com,gemini-pro,Medical record number detected: MR-2024-001,2024-01-15T13:52:00Z,false,0.73
+18,bias,low,christopher.hall@aerospace.com,gpt-3.5-turbo,Age bias detected in recommendation,2024-01-15T14:15:00Z,true,0.38
+19,jailbreak,high,james.lee@retail.com,claude-3-opus,Multi-step jailbreak attempt detected,2024-01-15T14:25:00Z,false,0.87
+20,toxicity,medium,emma.davis@enterprise.com,gpt-4,Inappropriate content in business context,2024-01-15T14:08:00Z,false,0.69
+21,pii,high,sarah.wilson@innovate.com,claude-3-sonnet,Passport number detected: A12345678,2024-01-15T14:10:00Z,true,0.91
+22,bias,medium,alex.chen@fintech.com,gemini-pro,Economic bias detected in financial analysis,2024-01-15T14:22:00Z,false,0.64
+23,jailbreak,low,robert.taylor@consulting.com,gpt-3.5-turbo,Simple jailbreak attempt detected,2024-01-15T14:28:00Z,true,0.52
+24,toxicity,high,lisa.garcia@healthcare.com,claude-3-opus,Medical misinformation detected,2024-01-15T14:05:00Z,false,0.93
+25,pii,medium,maria.rodriguez@education.com,gpt-4,Student ID detected: STU-2024-789,2024-01-15T14:38:00Z,false,0.67
+26,bias,low,anna.kowalski@manufacturing.com,claude-3-sonnet,Geographic bias in manufacturing data,2024-01-15T14:00:00Z,true,0.41
+27,jailbreak,medium,thomas.anderson@logistics.com,gpt-4,Context manipulation jailbreak attempt,2024-01-15T14:22:00Z,false,0.76
+28,toxicity,medium,rachel.green@marketing.com,gemini-pro,Unprofessional language in marketing content,2024-01-15T14:32:00Z,false,0.68
+29,pii,high,kevin.martinez@energy.com,claude-3-opus,Driver's license detected: DL-123456789,2024-01-15T14:55:00Z,true,0.94
+30,bias,medium,patricia.white@legal.com,gpt-3.5-turbo,Legal bias detected in case analysis,2024-01-15T13:55:00Z,false,0.71
+31,jailbreak,high,daniel.clark@realestate.com,claude-3-sonnet,Advanced prompt injection detected,2024-01-15T14:18:00Z,false,0.84
+32,toxicity,low,michelle.lee@pharma.com,gpt-4,Minor content policy violation,2024-01-15T13:52:00Z,true,0.33
+33,pii,medium,christopher.hall@aerospace.com,gemini-pro,Employee ID detected: EMP-789456,2024-01-15T14:15:00Z,false,0.66
+34,bias,medium,james.lee@retail.com,claude-3-opus,Cultural bias in customer analysis,2024-01-15T14:25:00Z,false,0.63
+35,jailbreak,low,emma.davis@enterprise.com,gpt-3.5-turbo,Basic jailbreak attempt in business context,2024-01-15T14:08:00Z,true,0.48
+36,toxicity,high,sarah.wilson@innovate.com,claude-3-sonnet,Harmful content in creative writing,2024-01-15T14:10:00Z,false,0.86
+37,pii,medium,alex.chen@fintech.com,gpt-4,Bank account number detected: 1234567890,2024-01-15T14:22:00Z,true,0.74
+38,bias,low,robert.taylor@consulting.com,gemini-pro,Industry bias in consulting report,2024-01-15T14:28:00Z,true,0.39
+39,jailbreak,medium,lisa.garcia@healthcare.com,claude-3-opus,Healthcare context jailbreak attempt,2024-01-15T14:05:00Z,false,0.77
+40,toxicity,medium,maria.rodriguez@education.com,gpt-4,Inappropriate content in educational material,2024-01-15T14:38:00Z,false,0.65
+41,pii,high,anna.kowalski@manufacturing.com,claude-3-sonnet,Manufacturing serial number detected: MFG-2024-001,2024-01-15T14:00:00Z,true,0.88
+42,bias,medium,thomas.anderson@logistics.com,gpt-4,Transportation bias in route optimization,2024-01-15T14:22:00Z,false,0.61
+43,jailbreak,high,rachel.green@marketing.com,gemini-pro,Marketing context jailbreak attempt,2024-01-15T14:32:00Z,false,0.81
+44,toxicity,low,kevin.martinez@energy.com,claude-3-opus,Minor energy industry content violation,2024-01-15T14:55:00Z,true,0.36
+45,pii,medium,patricia.white@legal.com,gpt-3.5-turbo,Case number detected: CASE-2024-456,2024-01-15T13:55:00Z,false,0.69
+46,bias,medium,daniel.clark@realestate.com,claude-3-sonnet,Property market bias detected,2024-01-15T14:18:00Z,false,0.58
+47,jailbreak,low,michelle.lee@pharma.com,gpt-4,Pharmaceutical context jailbreak attempt,2024-01-15T13:52:00Z,true,0.51
+48,toxicity,high,christopher.hall@aerospace.com,gemini-pro,Safety-critical content violation,2024-01-15T14:15:00Z,false,0.90
+49,pii,medium,james.lee@retail.com,claude-3-opus,Customer ID detected: CUST-789123,2024-01-15T14:25:00Z,true,0.72
+50,bias,low,emma.davis@enterprise.com,gpt-3.5-turbo,Enterprise data bias in analysis,2024-01-15T14:08:00Z,true,0.44
