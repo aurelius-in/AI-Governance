@@ -1,0 +1,101 @@
+id,user_id,project_id,provider,model,request_type,prompt_tokens,completion_tokens,total_cost,status,duration_ms,timestamp,user_email,project_name
+1,1,1,openai,gpt-4,chat,150,75,0.00675,completed,1250,2024-01-15T10:30:00Z,john.doe@acme.com,AI Research Project
+2,2,1,anthropic,claude-3-sonnet,chat,200,120,0.0048,completed,980,2024-01-15T10:32:00Z,jane.smith@acme.com,AI Research Project
+3,3,2,openai,gpt-3.5-turbo,completion,80,45,0.00025,completed,650,2024-01-15T10:35:00Z,mike.johnson@techcorp.com,Customer Support Bot
+4,1,1,google,gemini-pro,chat,180,95,0.0001375,completed,1100,2024-01-15T10:38:00Z,john.doe@acme.com,AI Research Project
+5,4,3,openai,gpt-4,chat,300,150,0.0135,completed,1800,2024-01-15T10:40:00Z,sarah.wilson@innovate.com,Content Generation
+6,2,1,anthropic,claude-3-opus,chat,250,180,0.0165,completed,2200,2024-01-15T10:42:00Z,jane.smith@acme.com,AI Research Project
+7,5,4,openai,gpt-3.5-turbo,completion,120,60,0.00036,completed,750,2024-01-15T10:45:00Z,david.brown@startup.com,Code Review Assistant
+8,3,2,google,gemini-pro,chat,160,85,0.0001225,completed,950,2024-01-15T10:48:00Z,mike.johnson@techcorp.com,Customer Support Bot
+9,1,1,openai,gpt-4,chat,400,200,0.018,completed,2400,2024-01-15T10:50:00Z,john.doe@acme.com,AI Research Project
+10,6,5,anthropic,claude-3-sonnet,chat,220,140,0.0054,completed,1400,2024-01-15T10:52:00Z,emma.davis@enterprise.com,Data Analysis
+11,4,3,openai,gpt-3.5-turbo,completion,90,50,0.00028,completed,600,2024-01-15T10:55:00Z,sarah.wilson@innovate.com,Content Generation
+12,2,1,google,gemini-pro,chat,190,100,0.000145,completed,1200,2024-01-15T10:58:00Z,jane.smith@acme.com,AI Research Project
+13,7,6,openai,gpt-4,chat,350,175,0.01575,completed,2100,2024-01-15T11:00:00Z,alex.chen@fintech.com,Risk Assessment
+14,5,4,anthropic,claude-3-sonnet,completion,180,110,0.0042,completed,1100,2024-01-15T11:02:00Z,david.brown@startup.com,Code Review Assistant
+15,3,2,openai,gpt-3.5-turbo,chat,140,70,0.00042,completed,850,2024-01-15T11:05:00Z,mike.johnson@techcorp.com,Customer Support Bot
+16,1,1,google,gemini-pro,chat,210,115,0.0001625,completed,1350,2024-01-15T11:08:00Z,john.doe@acme.com,AI Research Project
+17,8,7,anthropic,claude-3-opus,chat,280,160,0.0144,completed,1900,2024-01-15T11:10:00Z,lisa.garcia@healthcare.com,Medical Analysis
+18,6,5,openai,gpt-4,completion,320,160,0.0144,completed,2000,2024-01-15T11:12:00Z,emma.davis@enterprise.com,Data Analysis
+19,4,3,google,gemini-pro,chat,170,90,0.00013,completed,1050,2024-01-15T11:15:00Z,sarah.wilson@innovate.com,Content Generation
+20,2,1,openai,gpt-3.5-turbo,chat,130,65,0.00039,completed,800,2024-01-15T11:18:00Z,jane.smith@acme.com,AI Research Project
+21,9,8,anthropic,claude-3-sonnet,chat,240,130,0.0051,completed,1500,2024-01-15T11:20:00Z,robert.taylor@consulting.com,Strategy Planning
+22,7,6,openai,gpt-4,completion,380,190,0.0171,completed,2300,2024-01-15T11:22:00Z,alex.chen@fintech.com,Risk Assessment
+23,5,4,google,gemini-pro,chat,200,105,0.0001525,completed,1250,2024-01-15T11:25:00Z,david.brown@startup.com,Code Review Assistant
+24,3,2,anthropic,claude-3-sonnet,completion,160,95,0.0038,completed,1000,2024-01-15T11:28:00Z,mike.johnson@techcorp.com,Customer Support Bot
+25,1,1,openai,gpt-4,chat,450,225,0.02025,completed,2700,2024-01-15T11:30:00Z,john.doe@acme.com,AI Research Project
+26,10,9,google,gemini-pro,chat,230,120,0.000175,completed,1400,2024-01-15T11:32:00Z,maria.rodriguez@education.com,Student Assessment
+27,8,7,openai,gpt-3.5-turbo,completion,110,55,0.00033,completed,700,2024-01-15T11:35:00Z,lisa.garcia@healthcare.com,Medical Analysis
+28,6,5,anthropic,claude-3-opus,chat,260,145,0.01335,completed,1700,2024-01-15T11:38:00Z,emma.davis@enterprise.com,Data Analysis
+29,4,3,openai,gpt-4,completion,420,210,0.0189,completed,2500,2024-01-15T11:40:00Z,sarah.wilson@innovate.com,Content Generation
+30,2,1,google,gemini-pro,chat,195,100,0.0001475,completed,1150,2024-01-15T11:42:00Z,jane.smith@acme.com,AI Research Project
+31,11,10,anthropic,claude-3-sonnet,chat,270,140,0.0054,completed,1600,2024-01-15T11:45:00Z,james.lee@retail.com,Inventory Management
+32,9,8,openai,gpt-3.5-turbo,completion,100,50,0.0003,completed,650,2024-01-15T11:48:00Z,robert.taylor@consulting.com,Strategy Planning
+33,7,6,google,gemini-pro,chat,185,95,0.00014,completed,1100,2024-01-15T11:50:00Z,alex.chen@fintech.com,Risk Assessment
+34,5,4,openai,gpt-4,chat,360,180,0.0162,completed,2200,2024-01-15T11:52:00Z,david.brown@startup.com,Code Review Assistant
+35,3,2,anthropic,claude-3-sonnet,completion,190,110,0.0042,completed,1200,2024-01-15T11:55:00Z,mike.johnson@techcorp.com,Customer Support Bot
+36,1,1,google,gemini-pro,chat,220,115,0.0001675,completed,1300,2024-01-15T11:58:00Z,john.doe@acme.com,AI Research Project
+37,12,11,openai,gpt-4,chat,390,195,0.01755,completed,2400,2024-01-15T12:00:00Z,anna.kowalski@manufacturing.com,Quality Control
+38,10,9,anthropic,claude-3-opus,completion,290,155,0.01425,completed,1800,2024-01-15T12:02:00Z,maria.rodriguez@education.com,Student Assessment
+39,8,7,openai,gpt-3.5-turbo,chat,125,62,0.000375,completed,750,2024-01-15T12:05:00Z,lisa.garcia@healthcare.com,Medical Analysis
+40,6,5,google,gemini-pro,completion,175,90,0.0001325,completed,1000,2024-01-15T12:08:00Z,emma.davis@enterprise.com,Data Analysis
+41,4,3,anthropic,claude-3-sonnet,chat,250,135,0.0051,completed,1500,2024-01-15T12:10:00Z,sarah.wilson@innovate.com,Content Generation
+42,2,1,openai,gpt-4,completion,440,220,0.0198,completed,2600,2024-01-15T12:12:00Z,jane.smith@acme.com,AI Research Project
+43,13,12,google,gemini-pro,chat,205,110,0.0001575,completed,1200,2024-01-15T12:15:00Z,thomas.anderson@logistics.com,Route Optimization
+44,11,10,openai,gpt-3.5-turbo,completion,95,48,0.000286,completed,600,2024-01-15T12:18:00Z,james.lee@retail.com,Inventory Management
+45,9,8,anthropic,claude-3-sonnet,chat,235,125,0.0048,completed,1400,2024-01-15T12:20:00Z,robert.taylor@consulting.com,Strategy Planning
+46,7,6,openai,gpt-4,chat,370,185,0.01665,completed,2300,2024-01-15T12:22:00Z,alex.chen@fintech.com,Risk Assessment
+47,5,4,google,gemini-pro,completion,155,80,0.0001175,completed,900,2024-01-15T12:25:00Z,david.brown@startup.com,Code Review Assistant
+48,3,2,anthropic,claude-3-opus,chat,310,165,0.01515,completed,1900,2024-01-15T12:28:00Z,mike.johnson@techcorp.com,Customer Support Bot
+49,1,1,openai,gpt-3.5-turbo,chat,135,67,0.000405,completed,800,2024-01-15T12:30:00Z,john.doe@acme.com,AI Research Project
+50,14,13,google,gemini-pro,chat,215,115,0.000165,completed,1300,2024-01-15T12:32:00Z,rachel.green@marketing.com,Campaign Analysis
+51,12,11,anthropic,claude-3-sonnet,completion,200,115,0.0045,completed,1200,2024-01-15T12:35:00Z,anna.kowalski@manufacturing.com,Quality Control
+52,10,9,openai,gpt-4,chat,400,200,0.018,completed,2400,2024-01-15T12:38:00Z,maria.rodriguez@education.com,Student Assessment
+53,8,7,google,gemini-pro,completion,165,85,0.000125,completed,950,2024-01-15T12:40:00Z,lisa.garcia@healthcare.com,Medical Analysis
+54,6,5,anthropic,claude-3-sonnet,chat,245,130,0.0051,completed,1500,2024-01-15T12:42:00Z,emma.davis@enterprise.com,Data Analysis
+55,4,3,openai,gpt-3.5-turbo,completion,105,52,0.000315,completed,650,2024-01-15T12:45:00Z,sarah.wilson@innovate.com,Content Generation
+56,2,1,google,gemini-pro,chat,225,120,0.0001725,completed,1350,2024-01-15T12:48:00Z,jane.smith@acme.com,AI Research Project
+57,15,14,anthropic,claude-3-opus,chat,330,175,0.01605,completed,2100,2024-01-15T12:50:00Z,kevin.martinez@energy.com,Energy Optimization
+58,13,12,openai,gpt-4,completion,380,190,0.0171,completed,2300,2024-01-15T12:52:00Z,thomas.anderson@logistics.com,Route Optimization
+59,11,10,google,gemini-pro,chat,195,100,0.0001475,completed,1150,2024-01-15T12:55:00Z,james.lee@retail.com,Inventory Management
+60,9,8,openai,gpt-3.5-turbo,completion,115,57,0.000345,completed,700,2024-01-15T12:58:00Z,robert.taylor@consulting.com,Strategy Planning
+61,7,6,anthropic,claude-3-sonnet,chat,255,135,0.0051,completed,1500,2024-01-15T13:00:00Z,alex.chen@fintech.com,Risk Assessment
+62,5,4,openai,gpt-4,chat,350,175,0.01575,completed,2100,2024-01-15T13:02:00Z,david.brown@startup.com,Code Review Assistant
+63,3,2,google,gemini-pro,completion,145,75,0.00011,completed,850,2024-01-15T13:05:00Z,mike.johnson@techcorp.com,Customer Support Bot
+64,1,1,anthropic,claude-3-sonnet,chat,265,140,0.0054,completed,1600,2024-01-15T13:08:00Z,john.doe@acme.com,AI Research Project
+65,16,15,openai,gpt-4,chat,410,205,0.01845,completed,2500,2024-01-15T13:10:00Z,patricia.white@legal.com,Legal Research
+66,14,13,anthropic,claude-3-opus,completion,300,160,0.0147,completed,1800,2024-01-15T13:12:00Z,rachel.green@marketing.com,Campaign Analysis
+67,12,11,openai,gpt-3.5-turbo,chat,140,70,0.00042,completed,850,2024-01-15T13:15:00Z,anna.kowalski@manufacturing.com,Quality Control
+68,10,9,google,gemini-pro,completion,175,90,0.0001325,completed,1000,2024-01-15T13:18:00Z,maria.rodriguez@education.com,Student Assessment
+69,8,7,anthropic,claude-3-sonnet,chat,235,125,0.0048,completed,1400,2024-01-15T13:20:00Z,lisa.garcia@healthcare.com,Medical Analysis
+70,6,5,openai,gpt-4,completion,420,210,0.0189,completed,2500,2024-01-15T13:22:00Z,emma.davis@enterprise.com,Data Analysis
+71,4,3,google,gemini-pro,chat,205,110,0.0001575,completed,1200,2024-01-15T13:25:00Z,sarah.wilson@innovate.com,Content Generation
+72,2,1,anthropic,claude-3-sonnet,completion,180,110,0.0042,completed,1100,2024-01-15T13:28:00Z,jane.smith@acme.com,AI Research Project
+73,17,16,openai,gpt-3.5-turbo,chat,150,75,0.00045,completed,900,2024-01-15T13:30:00Z,daniel.clark@realestate.com,Property Analysis
+74,15,14,google,gemini-pro,completion,185,95,0.00014,completed,1100,2024-01-15T13:32:00Z,kevin.martinez@energy.com,Energy Optimization
+75,13,12,anthropic,claude-3-sonnet,chat,245,130,0.0051,completed,1500,2024-01-15T13:35:00Z,thomas.anderson@logistics.com,Route Optimization
+76,11,10,openai,gpt-4,chat,360,180,0.0162,completed,2200,2024-01-15T13:38:00Z,james.lee@retail.com,Inventory Management
+77,9,8,google,gemini-pro,completion,155,80,0.0001175,completed,900,2024-01-15T13:40:00Z,robert.taylor@consulting.com,Strategy Planning
+78,7,6,anthropic,claude-3-opus,chat,320,170,0.0156,completed,2000,2024-01-15T13:42:00Z,alex.chen@fintech.com,Risk Assessment
+79,5,4,openai,gpt-3.5-turbo,completion,120,60,0.00036,completed,750,2024-01-15T13:45:00Z,david.brown@startup.com,Code Review Assistant
+80,3,2,google,gemini-pro,chat,215,115,0.000165,completed,1300,2024-01-15T13:48:00Z,mike.johnson@techcorp.com,Customer Support Bot
+81,1,1,anthropic,claude-3-sonnet,chat,275,145,0.0057,completed,1700,2024-01-15T13:50:00Z,john.doe@acme.com,AI Research Project
+82,18,17,openai,gpt-4,completion,430,215,0.01935,completed,2600,2024-01-15T13:52:00Z,michelle.lee@pharma.com,Drug Discovery
+83,16,15,google,gemini-pro,chat,225,120,0.0001725,completed,1350,2024-01-15T13:55:00Z,patricia.white@legal.com,Legal Research
+84,14,13,anthropic,claude-3-sonnet,completion,190,110,0.0042,completed,1200,2024-01-15T13:58:00Z,rachel.green@marketing.com,Campaign Analysis
+85,12,11,openai,gpt-3.5-turbo,chat,130,65,0.00039,completed,800,2024-01-15T14:00:00Z,anna.kowalski@manufacturing.com,Quality Control
+86,10,9,google,gemini-pro,completion,165,85,0.000125,completed,950,2024-01-15T14:02:00Z,maria.rodriguez@education.com,Student Assessment
+87,8,7,anthropic,claude-3-sonnet,chat,240,125,0.0048,completed,1400,2024-01-15T14:05:00Z,lisa.garcia@healthcare.com,Medical Analysis
+88,6,5,openai,gpt-4,chat,380,190,0.0171,completed,2300,2024-01-15T14:08:00Z,emma.davis@enterprise.com,Data Analysis
+89,4,3,google,gemini-pro,completion,145,75,0.00011,completed,850,2024-01-15T14:10:00Z,sarah.wilson@innovate.com,Content Generation
+90,2,1,anthropic,claude-3-opus,chat,340,180,0.0165,completed,2100,2024-01-15T14:12:00Z,jane.smith@acme.com,AI Research Project
+91,19,18,openai,gpt-3.5-turbo,completion,100,50,0.0003,completed,650,2024-01-15T14:15:00Z,christopher.hall@aerospace.com,Flight Simulation
+92,17,16,google,gemini-pro,chat,235,125,0.00018,completed,1400,2024-01-15T14:18:00Z,daniel.clark@realestate.com,Property Analysis
+93,15,14,anthropic,claude-3-sonnet,completion,200,115,0.0045,completed,1200,2024-01-15T14:20:00Z,kevin.martinez@energy.com,Energy Optimization
+94,13,12,openai,gpt-4,chat,390,195,0.01755,completed,2400,2024-01-15T14:22:00Z,thomas.anderson@logistics.com,Route Optimization
+95,11,10,google,gemini-pro,completion,155,80,0.0001175,completed,900,2024-01-15T14:25:00Z,james.lee@retail.com,Inventory Management
+96,9,8,anthropic,claude-3-sonnet,chat,250,135,0.0051,completed,1500,2024-01-15T14:28:00Z,robert.taylor@consulting.com,Strategy Planning
+97,7,6,openai,gpt-3.5-turbo,completion,110,55,0.00033,completed,700,2024-01-15T14:30:00Z,alex.chen@fintech.com,Risk Assessment
+98,5,4,google,gemini-pro,chat,225,120,0.0001725,completed,1350,2024-01-15T14:32:00Z,david.brown@startup.com,Code Review Assistant
+99,3,2,anthropic,claude-3-opus,chat,290,155,0.01425,completed,1800,2024-01-15T14:35:00Z,mike.johnson@techcorp.com,Customer Support Bot
+100,1,1,openai,gpt-4,completion,450,225,0.02025,completed,2700,2024-01-15T14:38:00Z,john.doe@acme.com,AI Research Project
